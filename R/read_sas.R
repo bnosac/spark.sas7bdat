@@ -2,7 +2,8 @@
 #' @title Read in SAS datasets in .sas7bdat format into Spark by using the spark-sas7bdat Spark package.
 #' @description Read in SAS datasets in .sas7bdat format into Spark by using the spark-sas7bdat Spark package.
 #' @param sc Connection to Spark local instance or remote cluster. See the example
-#' @param path path to the SAS file either on HDFS (hdfs://), S3 (s3n://), as well as the local file system (file://). 
+#' @param path full path to the SAS file either on HDFS (hdfs://), S3 (s3n://), as well as the local file system (file://). 
+#' Mark that files on the local file system need to be specified using the full path.
 #' @param table character string with the name of the Spark table where the SAS dataset will be put into
 #' @return an object of class \code{tbl_spark}, which is a reference to a Spark DataFrame based on which
 #' dplyr functions can be executed. See \url{https://github.com/rstudio/sparklyr}
