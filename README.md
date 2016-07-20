@@ -4,7 +4,7 @@ The  **spark.sas7bdat** package allows R users working with [Apache Spark](https
 
 
 ## Example
-The following example reads in a file called iris.sas7bdat in parallel in the a table called sas_example in Spark. Do try this with bigger data on your cluster.
+The following example reads in a file called iris.sas7bdat in parallel in a table called sas_example in Spark. Do try this with bigger data on your cluster and look at the help of the [sparklyr](https://github.com/rstudio/sparklyr) package to connect to your Spark cluster.
 
 ```
 library(spark.sas7bdat)

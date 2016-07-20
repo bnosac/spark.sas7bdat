@@ -1,0 +1,20 @@
+Package: spark.sas7bdat
+Type: Package
+Title: Read in SAS datasets (.sas7bdat files) into Spark
+Description: Read in SAS datasets (.sas7bdat files) into Spark from R. Uses the
+    spark-sas7bdat Spark package to load SAS dataset in parallel in Spark.
+Maintainer: Jan Wijffels <jwijffels@bnosac.be>
+Author: c(person("Jan", "Wijffels", role = c("aut", "cre", "cph"), email =
+    "jwijffels@bnosac.be"), person("BNOSAC", role = "cph"))
+License: GPL-3
+Version: 1.0
+URL: https://github.com/bnosac/spark.sas7bdat
+Date: 2016-07-20
+VignetteBuilder: knitr
+Imports:
+    sparkapi,
+    sparklyr,
+    magrittr
+Suggests:
+    knitr
+RoxygenNote: 5.0.1
