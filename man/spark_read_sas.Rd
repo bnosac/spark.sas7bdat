@@ -37,6 +37,6 @@ x
 \url{https://spark-packages.org/package/saurfang/spark-sas7bdat}, \url{https://github.com/saurfang/spark-sas7bdat}, \url{https://github.com/rstudio/sparklyr}
 }
 \seealso{
-\code{\link[sparklyr]{start_shell}}, \code{\link[sparklyr]{sdf_register}}
+\code{\link[sparklyr]{spark_connect}}, \code{\link[sparklyr]{sdf_register}}
 }
 

@@ -8,7 +8,7 @@
 #' @return an object of class \code{tbl_spark}, which is a reference to a Spark DataFrame based on which
 #' dplyr functions can be executed. See \url{https://github.com/rstudio/sparklyr}
 #' @export
-#' @seealso \code{\link[sparklyr]{start_shell}}, \code{\link[sparklyr]{sdf_register}}
+#' @seealso \code{\link[sparklyr]{spark_connect}}, \code{\link[sparklyr]{sdf_register}}
 #' @references \url{https://spark-packages.org/package/saurfang/spark-sas7bdat}, \url{https://github.com/saurfang/spark-sas7bdat}, \url{https://github.com/rstudio/sparklyr}
 #' @examples
 #' \dontrun{
