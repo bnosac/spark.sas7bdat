@@ -8,15 +8,15 @@
 #' @return an object of class \code{tbl_spark}, which is a reference to a Spark DataFrame based on which
 #' dplyr functions can be executed. See \url{https://github.com/rstudio/sparklyr}
 #' @export
-#' @seealso \code{\link[sparkapi]{start_shell}}, \code{\link[sparklyr]{sdf_register}}
-#' @references \url{https://spark-packages.org/package/saurfang/spark-sas7bdat}, \url{https://github.com/saurfang/spark-sas7bdat}, \url{https://github.com/rstudio/sparkapi}, \url{https://github.com/rstudio/sparklyr}
+#' @seealso \code{\link[sparklyr]{start_shell}}, \code{\link[sparklyr]{sdf_register}}
+#' @references \url{https://spark-packages.org/package/saurfang/spark-sas7bdat}, \url{https://github.com/saurfang/spark-sas7bdat}, \url{https://github.com/rstudio/sparklyr}
 #' @examples
 #' \dontrun{
 #' myfile <- system.file("extdata", "iris.sas7bdat", package = "spark.sas7bdat")
 #' myfile
 #' 
-#' library(spark.sas7bdat)
 #' library(sparklyr)
+#' library(spark.sas7bdat)
 #' sc <- spark_connect(master = "local")
 #' x <- spark_read_sas(sc, path = myfile, table = "sas_example")
 #' x
@@ -35,12 +35,12 @@ spark_read_sas <- function(sc, path, table){
 
 
 spark_dependencies <- function(scala_version, ...) {
-  sparkapi::spark_dependency(
+  sparklyr::spark_dependency(
     packages = c(
       sprintf("saurfang:spark-sas7bdat:1.1.4-s_%s", scala_version)
     )
   )
 }
 .onLoad <- function(libname, pkgname) {
-  sparkapi::register_extension(pkgname)
+  sparklyr::register_extension(pkgname)
 }

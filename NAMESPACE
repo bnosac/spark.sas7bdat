@@ -2,8 +2,8 @@
 
 export(spark_read_sas)
 importFrom(magrittr,"%>%")
-importFrom(sparkapi,hive_context)
-importFrom(sparkapi,invoke)
-importFrom(sparkapi,register_extension)
-importFrom(sparkapi,spark_dependency)
+importFrom(sparklyr,hive_context)
+importFrom(sparklyr,invoke)
+importFrom(sparklyr,register_extension)
 importFrom(sparklyr,sdf_register)
+importFrom(sparklyr,spark_dependency)

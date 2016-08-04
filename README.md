@@ -6,9 +6,9 @@ The  **spark.sas7bdat** package allows R users working with [Apache Spark](https
 ## Example
 The following example reads in a file called iris.sas7bdat in parallel in a table called sas_example in Spark. Do try this with bigger data on your cluster and look at the help of the [sparklyr](https://github.com/rstudio/sparklyr) package to connect to your Spark cluster.
 
-```
-library(spark.sas7bdat)
+```r
 library(sparklyr)
+library(spark.sas7bdat)
 mysasfile <- system.file("extdata", "iris.sas7bdat", package = "spark.sas7bdat")
 
 sc <- spark_connect(master = "local")
@@ -17,9 +17,8 @@ x
 ```
 
 The resulting pointer to a Spark table can be further used in dplyr statements
-```
+```r
 library(dplyr)
-library(magrittr)
 x %>% group_by(Species) %>%
   summarise(count = n(), length = mean(Sepal_Length), width = mean(Sepal_Width))
 ```
@@ -35,7 +34,7 @@ vignette("spark_sas7bdat_examples", package = "spark.sas7bdat")
 
 In order to compare the functionality to the read_sas function from the [haven](https://cran.r-project.org/web/packages/haven/index.html) package, below we show a comparison on a small 5234557 rows x 2 columns SAS dataset with only numeric data. Imported on 8 cores.
 
-```
+```r
 mysasfile <- "/home/bnosac/Desktop/testdata.sas7bdat"
 system.time(x <- spark_read_sas(sc, path = mysasfile, table = "testdata"))
    user  system elapsed 

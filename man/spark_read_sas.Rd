@@ -9,7 +9,8 @@ spark_read_sas(sc, path, table)
 \arguments{
 \item{sc}{Connection to Spark local instance or remote cluster. See the example}
 
-\item{path}{path to the SAS file either on HDFS (hdfs://), S3 (s3n://), as well as the local file system (file://).}
+\item{path}{full path to the SAS file either on HDFS (hdfs://), S3 (s3n://), as well as the local file system (file://). 
+Mark that files on the local file system need to be specified using the full path.}
 
 \item{table}{character string with the name of the Spark table where the SAS dataset will be put into}
 }
@@ -25,17 +26,17 @@ Read in SAS datasets in .sas7bdat format into Spark by using the spark-sas7bdat 
 myfile <- system.file("extdata", "iris.sas7bdat", package = "spark.sas7bdat")
 myfile
 
-library(spark.sas7bdat)
 library(sparklyr)
+library(spark.sas7bdat)
 sc <- spark_connect(master = "local")
 x <- spark_read_sas(sc, path = myfile, table = "sas_example")
 x
 }
 }
 \references{
-\url{https://spark-packages.org/package/saurfang/spark-sas7bdat}, \url{https://github.com/saurfang/spark-sas7bdat}, \url{https://github.com/rstudio/sparkapi}, \url{https://github.com/rstudio/sparklyr}
+\url{https://spark-packages.org/package/saurfang/spark-sas7bdat}, \url{https://github.com/saurfang/spark-sas7bdat}, \url{https://github.com/rstudio/sparklyr}
 }
 \seealso{
-\code{\link[sparkapi]{start_shell}}, \code{\link[sparklyr]{sdf_register}}
+\code{\link[sparklyr]{start_shell}}, \code{\link[sparklyr]{sdf_register}}
 }
 
