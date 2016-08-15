@@ -2,3 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
+derby.log*
+log4j.*
