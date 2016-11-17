@@ -1,10 +1,13 @@
 # spark.sas7bdat
 
-The  **spark.sas7bdat** package allows R users working with [Apache Spark](https://spark.apache.org) to read in [SAS](http://www.sas.com) datasets in .sas7bdat format into Spark by using the [spark-sas7bdat Spark package](https://spark-packages.org/package/saurfang/spark-sas7bdat). This allows R users to load a SAS dataset in parallel into a Spark table.
+The  **spark.sas7bdat** package allows R users working with [Apache Spark](https://spark.apache.org) to read in [SAS](http://www.sas.com) datasets in .sas7bdat format into Spark by using the [spark-sas7bdat Spark package](https://spark-packages.org/package/saurfang/spark-sas7bdat). This allows R users to 
+
+- load a SAS dataset in parallel into a Spark table for further processing with the [sparklyr](https://github.com/rstudio/sparklyr) package
+- process in parallel the full SAS dataset with dplyr statements, instead of having to import the full SAS dataset in RAM (using the foreign/haven packages) and hence avoiding RAM problems of large imports
 
 
 ## Example
-The following example reads in a file called iris.sas7bdat in parallel in a table called sas_example in Spark. Do try this with bigger data on your cluster and look at the help of the [sparklyr](https://github.com/rstudio/sparklyr) package to connect to your Spark cluster.
+The following example reads in a file called iris.sas7bdat in a table called sas_example in Spark. Do try this with bigger data on your cluster and look at the help of the [sparklyr](https://github.com/rstudio/sparklyr) package to connect to your Spark cluster.
 
 ```r
 library(sparklyr)
@@ -25,14 +28,26 @@ x %>% group_by(Species) %>%
 
 ## Installation
 
+Install the package from CRAN.
+```
+install.packages('spark.sas7bdat')
+```
+
+Or install this development version from github.
 ```
 devtools::install_github("bnosac/spark.sas7bdat", build_vignettes = TRUE)
 vignette("spark_sas7bdat_examples", package = "spark.sas7bdat")
 ```
 
+The package has been tested out with Spark version 2.0.1 and Hadoop 2.7.
+```
+library(sparklyr)
+spark_install(version = "2.0.1", hadoop_version = "2.7")
+```
+
 ## Speed comparison
 
-In order to compare the functionality to the read_sas function from the [haven](https://cran.r-project.org/web/packages/haven/index.html) package, below we show a comparison on a small 5234557 rows x 2 columns SAS dataset with only numeric data. Imported on 8 cores.
+In order to compare the functionality to the read_sas function from the [haven](https://cran.r-project.org/web/packages/haven/index.html) package, below we show a comparison on a small 5234557 rows x 2 columns SAS dataset with only numeric data. Processing is done on 8 cores. With the haven package you need to import the data in RAM, with the spark.sas7bdat package, you can immediately execute dplyr statements on top of the SAS dataset.
 
 ```r
 mysasfile <- "/home/bnosac/Desktop/testdata.sas7bdat"

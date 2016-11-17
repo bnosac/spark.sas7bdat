@@ -31,6 +31,10 @@ library(spark.sas7bdat)
 sc <- spark_connect(master = "local")
 x <- spark_read_sas(sc, path = myfile, table = "sas_example")
 x
+
+library(dplyr)
+x \%>\% group_by(Species) \%>\%
+  summarise(count = n(), length = mean(Sepal_Length), width = mean(Sepal_Width))
 }
 }
 \references{

@@ -5,6 +5,6 @@
 \alias{spark.sas7bdat-package}
 \title{Read in SAS datasets (.sas7bdat files) into Spark}
 \description{
-'spark.sas7bdat' uses the spark-sas7bdat Spark package to load SAS dataset in parallel in Spark.
+'spark.sas7bdat' uses the spark-sas7bdat Spark package to process SAS datasets in parallel using Spark. Hereby allowing to execute dplyr statements on top of SAS datasets.
 }
 

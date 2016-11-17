@@ -20,12 +20,19 @@
 #' sc <- spark_connect(master = "local")
 #' x <- spark_read_sas(sc, path = myfile, table = "sas_example")
 #' x
+#' 
+#' library(dplyr)
+#' x %>% group_by(Species) %>%
+#'   summarise(count = n(), length = mean(Sepal_Length), width = mean(Sepal_Width))
 #' }
 spark_read_sas <- function(sc, path, table){
   if(missing(table)){
     stop("Please provide the name of the Spark table where to store the SAS file into")
   }
-  x <- hive_context(sc) %>% invoke("read") %>% invoke("format", "com.github.saurfang.sas.spark") %>% invoke("load", path)
+  x <- hive_context(sc)
+  x <- invoke(x, "read")
+  x <- invoke(x, "format", "com.github.saurfang.sas.spark")
+  x <- invoke(x, "load", path)
   sdf <- sdf_register(x, name = table)
   sdf
 }

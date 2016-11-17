@@ -31,7 +31,7 @@ sc <- spark_connect(master = "local")
 x <- spark_read_sas(sc, path = mysasfile, table = "sas_example")
 ```
 
-The resulting pointer to a Spark table can be further used in dplyr statements
+The resulting pointer to a Spark table can be further used in dplyr statements. These will be executed in parallel using the Spark functionalities of the spark-sas7bdat package.
 ```{r, eval=FALSE}
 library(dplyr)
 library(magrittr)
