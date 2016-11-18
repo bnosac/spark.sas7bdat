@@ -23,10 +23,14 @@ Read in SAS datasets in .sas7bdat format into Spark by using the spark-sas7bdat 
 }
 \examples{
 \dontrun{
+## If you haven't got a Spark cluster, you can install Spark locally like this
+library(sparklyr)
+spark_install(version = "2.0.1")
+
+## Define the SAS .sas7bdat file, connect to the Spark cluster to read + process the data
 myfile <- system.file("extdata", "iris.sas7bdat", package = "spark.sas7bdat")
 myfile
 
-library(sparklyr)
 library(spark.sas7bdat)
 sc <- spark_connect(master = "local")
 x <- spark_read_sas(sc, path = myfile, table = "sas_example")
