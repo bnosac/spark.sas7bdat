@@ -46,11 +46,19 @@ spark_read_sas <- function(sc, path, table){
 
 
 spark_dependencies <- function(scala_version, ...) {
-  sparklyr::spark_dependency(
-    packages = c(
-      sprintf("saurfang:spark-sas7bdat:1.1.4-s_%s", scala_version)
+  if(scala_version == "2.10"){
+    sparklyr::spark_dependency(
+      packages = c(
+        sprintf("saurfang:spark-sas7bdat:1.1.4-s_%s", scala_version)
+      )
     )
-  )
+  }else{
+    sparklyr::spark_dependency(
+      packages = c(
+        sprintf("saurfang:spark-sas7bdat:1.1.5-s_%s", scala_version)
+      )
+    )
+  }
 }
 .onLoad <- function(libname, pkgname) {
   sparklyr::register_extension(pkgname)
