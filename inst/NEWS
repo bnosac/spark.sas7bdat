@@ -1,3 +1,7 @@
+                CHANGES IN spark.sas7bdat VERSION 1.2
+
+    o    Use Authors@R in DESCRIPTION instead of Author
+    
                 CHANGES IN spark.sas7bdat VERSION 1.1
 
     o    Use saurfang:spark-sas7bdat:1.1.4 in case of Scala version 2.10 and saurfang:spark-sas7bdat:1.1.5 for other Scala versions. Allowing to use this package with Spark 2.0.1

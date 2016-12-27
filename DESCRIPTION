@@ -3,10 +3,10 @@ Type: Package
 Title: Read in 'SAS' Data ('.sas7bdat' Files) into 'Apache Spark'
 Description: Read in 'SAS' Data ('.sas7bdat' Files) into 'Apache Spark' from R. 'Apache Spark' is an open source cluster computing framework available at <http://spark.apache.org>. This R package uses the 'spark-sas7bdat' 'Spark' package (<https://spark-packages.org/package/saurfang/spark-sas7bdat>) to import and process 'SAS' data in parallel using 'Spark'. Hereby allowing to execute 'dplyr' statements in parallel on top of 'SAS' data.
 Maintainer: Jan Wijffels <jwijffels@bnosac.be>
-Author: c(person("Jan", "Wijffels", role = c("aut", "cre", "cph"), email =
+Authors@R: c(person("Jan", "Wijffels", role = c("aut", "cre", "cph"), email =
     "jwijffels@bnosac.be"), person("BNOSAC", role = "cph"))
 License: GPL-3
-Version: 1.1
+Version: 1.2
 URL: https://github.com/bnosac/spark.sas7bdat
 Date: 2016-11-28
 VignetteBuilder: knitr
