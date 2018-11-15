@@ -13,5 +13,6 @@ VignetteBuilder: knitr
 Imports:
     sparklyr (>= 0.3)
 Suggests:
-    knitr
+    knitr,
+    testthat
 RoxygenNote: 5.0.1
