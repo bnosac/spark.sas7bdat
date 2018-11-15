@@ -41,25 +41,15 @@ spark_read_sas <- function(sc, path, table){
   sdf
 }
 
-
-
-
-
 spark_dependencies <- function(scala_version, ...) {
-  if(scala_version == "2.10"){
     sparklyr::spark_dependency(
-      packages = c(
-        sprintf("saurfang:spark-sas7bdat:1.1.4-s_%s", scala_version)
+      jars = c(
+        system.file(sprintf("java/parso-2.0.8.jar"), package = "spark.sas7bdat", mustWork = TRUE),
+        system.file(sprintf("java/spark-sas7bdat-2.0.0-s_%s.jar", scala_version), package = "spark.sas7bdat", mustWork = TRUE)
       )
     )
-  }else{
-    sparklyr::spark_dependency(
-      packages = c(
-        sprintf("saurfang:spark-sas7bdat:1.1.5-s_%s", scala_version)
-      )
-    )
-  }
 }
+
 .onLoad <- function(libname, pkgname) {
   sparklyr::register_extension(pkgname)
 }
