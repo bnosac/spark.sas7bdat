@@ -4,3 +4,4 @@
 .Ruserdata
 derby.log*
 log4j.*
+/.Rprofile

@@ -47,4 +47,3 @@ x \%>\% group_by(Species) \%>\%
 \seealso{
 \code{\link[sparklyr]{spark_connect}}, \code{\link[sparklyr]{sdf_register}}
 }
-
