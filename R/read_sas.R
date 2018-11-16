@@ -9,7 +9,7 @@
 #' dplyr functions can be executed. See \url{https://github.com/rstudio/sparklyr}
 #' @export
 #' @seealso \code{\link[sparklyr]{spark_connect}}, \code{\link[sparklyr]{sdf_register}}
-#' @references \url{https://spark-packages.org/package/saurfang/spark-sas7bdat}, \url{https://github.com/saurfang/spark-sas7bdat}, \url{https://github.com/rstudio/sparklyr}
+#' @references \url{https://spark-packages.org/package/saurfang/spark-sas7bdat}, \url{https://github.com/saurfang/spark-sas7bdat}, \url{https://github.com/rstudio/sparklyr}, \url{https://github.com/epam/parso}
 #' @examples
 #' \dontrun{
 #' ## If you haven't got a Spark cluster, you can install Spark locally like this

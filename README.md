@@ -64,3 +64,8 @@ system.time(x <- haven::read_sas(mysasfile))
 Need support in big data and Spark analysis?
 Contact BNOSAC: http://www.bnosac.be
 
+## External Java Libraries
+This package uses two Java dependencies, for more information on these dependencies please see the developers GitHub Repos:
+
+- [Parso Java library] (https://github.com/epam/parso)
+- [SparkSQL SAS Input Library] (https://github.com/saurfang/spark-sas7bdat)
