@@ -9,7 +9,7 @@
 #' dplyr functions can be executed. See \url{https://github.com/rstudio/sparklyr}
 #' @export
 #' @seealso \code{\link[sparklyr]{spark_connect}}, \code{\link[sparklyr]{sdf_register}}
-#' @references \url{https://spark-packages.org/package/saurfang/spark-sas7bdat}, \url{https://github.com/saurfang/spark-sas7bdat}, \url{https://github.com/rstudio/sparklyr}
+#' @references \url{https://spark-packages.org/package/saurfang/spark-sas7bdat}, \url{https://github.com/saurfang/spark-sas7bdat}, \url{https://github.com/rstudio/sparklyr}, \url{https://github.com/epam/parso}
 #' @examples
 #' \dontrun{
 #' ## If you haven't got a Spark cluster, you can install Spark locally like this
@@ -41,13 +41,15 @@ spark_read_sas <- function(sc, path, table){
   sdf
 }
 
-spark_dependencies <- function(spark_version, scala_version, ...) {
-  sparklyr::spark_dependency(
-    packages = c(
-      sprintf("saurfang:spark-sas7bdat:2.0.0-s_%s", scala_version)
+spark_dependencies <- function(scala_version, ...) {
+    sparklyr::spark_dependency(
+      jars = c(
+        system.file(sprintf("java/parso-2.0.8.jar"), package = "spark.sas7bdat", mustWork = TRUE),
+        system.file(sprintf("java/spark-sas7bdat-2.0.0-s_%s.jar", scala_version), package = "spark.sas7bdat", mustWork = TRUE)
+      )
     )
-  )
 }
+
 .onLoad <- function(libname, pkgname) {
   sparklyr::register_extension(pkgname)
 }

@@ -42,9 +42,8 @@ x \%>\% group_by(Species) \%>\%
 }
 }
 \references{
-\url{https://spark-packages.org/package/saurfang/spark-sas7bdat}, \url{https://github.com/saurfang/spark-sas7bdat}, \url{https://github.com/rstudio/sparklyr}
+\url{https://spark-packages.org/package/saurfang/spark-sas7bdat}, \url{https://github.com/saurfang/spark-sas7bdat}, \url{https://github.com/rstudio/sparklyr}, \url{https://github.com/epam/parso}
 }
 \seealso{
 \code{\link[sparklyr]{spark_connect}}, \code{\link[sparklyr]{sdf_register}}
 }
-

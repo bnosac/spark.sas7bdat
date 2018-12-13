@@ -3,15 +3,23 @@ Type: Package
 Title: Read in 'SAS' Data ('.sas7bdat' Files) into 'Apache Spark'
 Description: Read in 'SAS' Data ('.sas7bdat' Files) into 'Apache Spark' from R. 'Apache Spark' is an open source cluster computing framework available at <http://spark.apache.org>. This R package uses the 'spark-sas7bdat' 'Spark' package (<https://spark-packages.org/package/saurfang/spark-sas7bdat>) to import and process 'SAS' data in parallel using 'Spark'. Hereby allowing to execute 'dplyr' statements in parallel on top of 'SAS' data.
 Maintainer: Jan Wijffels <jwijffels@bnosac.be>
-Authors@R: c(person("Jan", "Wijffels", role = c("aut", "cre", "cph"), email =
-    "jwijffels@bnosac.be"), person("BNOSAC", role = "cph"), person("Geyer", "Bisschoff", email = "bisschoff.geyer@gmail.com", role = "ctb"))
-License: GPL-3
-Version: 1.3
-URL: https://github.com/bnosac/spark.sas7bdat
-Date: 2018-07-13
+Authors@R: c(person("Jan", "Wijffels", role = c("aut", "cre", "cph"), email = "jwijffels@bnosac.be"),
+             person("BNOSAC", role = "cph"),
+             person("Geyer", "Bisschoff", email = "bisschoff.geyer@gmail.com", role = "ctb"),
+             person("Saurfang", role = c('aut', 'ctb', 'cph'), comment = "Apache 2.0 License, Files: inst/java/spark-sas7bdat-2.0.0-s_2.10.jar and inst/java/spark-sas7bdat-2.0.0-s_2.11.jar"),
+             person("EPAM", role = c('aut', 'ctb', 'cph'), comment = "Apache 2.0 License, Files: inst/java/parso-2.0.8.jar")
+             )
+License: file LICENSE
+Version: 1.4
+Encoding: UTF-8
+URL: https://github.com/bnosac/spark.sas7bdat,
+    https://github.com/saurfang/spark-sas7bdat,
+    https://github.com/epam/parso/
+Date: 2018-11-15
 VignetteBuilder: knitr
 Imports:
     sparklyr (>= 0.3)
 Suggests:
-    knitr
-RoxygenNote: 5.0.1
+    knitr,
+    testthat
+RoxygenNote: 6.1.0
