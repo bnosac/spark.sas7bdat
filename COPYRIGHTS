@@ -1,0 +1,42 @@
+This R package is distributed under the Apache 2.0 license: http://www.apache.org/licenses/LICENSE-2.0.
+The package also includes 3rd party open source software components which are distributed under the Apache 2.0 license. 
+The following is a list of these components and their copyrights. Full copies of the license agreements of these components are included below.
+
+Portions of this software are based on spark-sas7bdat.
+- spark-sas7bdat: Apache 2.0 License, namely : inst/java/spark-sas7bdat-2.0.0-s_2.10.jar and inst/java/spark-sas7bdat-2.0.0-s_2.11.jar
+
+spark-sas7bdat also comes with the following copyrights:
+
+Copyright (C) 2018 Forest Fang.
+See the LICENCE.txt file distributed with this work for additional
+information regarding copyright ownership.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Portions of this software are based on sparso.
+- parso: Apache 2.0 License, namely inst/java/parso-2.0.8.jar
+
+parso also comes with the following copyrights:
+
+Copyright (C) 2015 EPAM
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.

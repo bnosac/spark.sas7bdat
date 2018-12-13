@@ -6,8 +6,8 @@ Maintainer: Jan Wijffels <jwijffels@bnosac.be>
 Authors@R: c(person("Jan", "Wijffels", role = c("aut", "cre", "cph"), email = "jwijffels@bnosac.be"),
              person("BNOSAC", role = "cph"),
              person("Geyer", "Bisschoff", email = "bisschoff.geyer@gmail.com", role = "ctb"),
-             person("Saurfang", role = "ctb"),
-             person("EPAM", role = "cph")
+             person("Saurfang", role = c('aut', 'ctb', 'cph'), comment = "Apache 2.0 License, Files: inst/java/spark-sas7bdat-2.0.0-s_2.10.jar and inst/java/spark-sas7bdat-2.0.0-s_2.11.jar"),
+             person("EPAM", role = c('aut', 'ctb', 'cph'), comment = "Apache 2.0 License, Files: inst/java/parso-2.0.8.jar")
              )
 License: file LICENSE
 Version: 1.4
