@@ -7,4 +7,3 @@
 \description{
 'spark.sas7bdat' uses the spark-sas7bdat Spark package to process SAS datasets in parallel using Spark. Hereby allowing to execute dplyr statements on top of SAS datasets.
 }
-
