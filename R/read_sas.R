@@ -6,10 +6,10 @@
 #' Mark that files on the local file system need to be specified using the full path.
 #' @param table character string with the name of the Spark table where the SAS dataset will be put into
 #' @return an object of class \code{tbl_spark}, which is a reference to a Spark DataFrame based on which
-#' dplyr functions can be executed. See \url{https://github.com/rstudio/sparklyr}
+#' dplyr functions can be executed. See \url{https://github.com/sparklyr/sparklyr}
 #' @export
 #' @seealso \code{\link[sparklyr]{spark_connect}}, \code{\link[sparklyr]{sdf_register}}
-#' @references \url{https://spark-packages.org/package/saurfang/spark-sas7bdat}, \url{https://github.com/saurfang/spark-sas7bdat}, \url{https://github.com/rstudio/sparklyr}
+#' @references \url{https://spark-packages.org/package/saurfang/spark-sas7bdat}, \url{https://github.com/saurfang/spark-sas7bdat}, \url{https://github.com/sparklyr/sparklyr}
 #' @examples
 #' \dontrun{
 #' ## If you haven't got a Spark cluster, you can install Spark locally like this

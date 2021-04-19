@@ -1,5 +1,6 @@
                 CHANGES IN spark.sas7bdat VERSION 1.4
 
+    o    Fix URL's
     o    Add rmarkdown to Suggests in DESCRIPTION
     
                 CHANGES IN spark.sas7bdat VERSION 1.3

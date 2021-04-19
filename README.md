@@ -1,13 +1,13 @@
 # spark.sas7bdat
 
-The  **spark.sas7bdat** package allows R users working with [Apache Spark](https://spark.apache.org) to read in [SAS](http://www.sas.com) datasets in .sas7bdat format into Spark by using the [spark-sas7bdat Spark package](https://spark-packages.org/package/saurfang/spark-sas7bdat). This allows R users to 
+The  **spark.sas7bdat** package allows R users working with [Apache Spark](https://spark.apache.org) to read in [SAS](https://www.sas.com) datasets in .sas7bdat format into Spark by using the [spark-sas7bdat Spark package](https://spark-packages.org/package/saurfang/spark-sas7bdat). This allows R users to 
 
 - load a SAS dataset in parallel into a Spark table for further processing with the [sparklyr](https://cran.r-project.org/package=sparklyr) package
 - process in parallel the full SAS dataset with dplyr statements, instead of having to import the full SAS dataset in RAM (using the foreign/haven packages) and hence avoiding RAM problems of large imports
 
 
 ## Example
-The following example reads in a file called iris.sas7bdat in a table called sas_example in Spark. Do try this with bigger data on your cluster and look at the help of the [sparklyr](https://github.com/rstudio/sparklyr) package to connect to your Spark cluster.
+The following example reads in a file called iris.sas7bdat in a table called sas_example in Spark. Do try this with bigger data on your cluster and look at the help of the [sparklyr](https://github.com/sparklyr/sparklyr) package to connect to your Spark cluster.
 
 ```r
 library(sparklyr)

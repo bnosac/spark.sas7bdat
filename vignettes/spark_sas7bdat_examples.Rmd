@@ -9,18 +9,18 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-This R package allows R users to easily import large [SAS](http://www.sas.com) datasets into [Spark](https://spark.apache.org) tables in parallel.
+This R package allows R users to easily import large [SAS](https://www.sas.com) datasets into [Spark](https://spark.apache.org) tables in parallel.
 
 
-The package uses the [spark-sas7bdat Spark package](https://spark-packages.org/package/saurfang/spark-sas7bdat) in order to read a SAS dataset in Spark. That Spark package imports the data in parallel on the Spark cluster using the Parso library and this process is launched from R using the [sparklyr](https://github.com/rstudio/sparklyr) functionality. 
+The package uses the [spark-sas7bdat Spark package](https://spark-packages.org/package/saurfang/spark-sas7bdat) in order to read a SAS dataset in Spark. That Spark package imports the data in parallel on the Spark cluster using the Parso library and this process is launched from R using the [sparklyr](https://github.com/sparklyr/sparklyr) functionality. 
 
 More information about the spark-sas7bdat Spark package and sparklyr can be found at:
 
 - https://spark-packages.org/package/saurfang/spark-sas7bdat and https://github.com/saurfang/spark-sas7bdat
-- https://github.com/rstudio/sparklyr
+- https://github.com/sparklyr/sparklyr
 
 ## Example
-The following example reads in a file called iris.sas7bdat in parallel in a table called sas_example in Spark. Do try this with bigger data on your cluster and look at the help of the [sparklyr](https://github.com/rstudio/sparklyr) package to connect to your Spark cluster.
+The following example reads in a file called iris.sas7bdat in parallel in a table called sas_example in Spark. Do try this with bigger data on your cluster and look at the help of the [sparklyr](https://github.com/sparklyr/sparklyr) package to connect to your Spark cluster.
 
 ```{r, eval=FALSE}
 library(sparklyr)

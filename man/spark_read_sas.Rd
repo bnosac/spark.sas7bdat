@@ -16,7 +16,7 @@ Mark that files on the local file system need to be specified using the full pat
 }
 \value{
 an object of class \code{tbl_spark}, which is a reference to a Spark DataFrame based on which
-dplyr functions can be executed. See \url{https://github.com/rstudio/sparklyr}
+dplyr functions can be executed. See \url{https://github.com/sparklyr/sparklyr}
 }
 \description{
 Read in SAS datasets in .sas7bdat format into Spark by using the spark-sas7bdat Spark package.
@@ -42,7 +42,7 @@ x \%>\% group_by(Species) \%>\%
 }
 }
 \references{
-\url{https://spark-packages.org/package/saurfang/spark-sas7bdat}, \url{https://github.com/saurfang/spark-sas7bdat}, \url{https://github.com/rstudio/sparklyr}
+\url{https://spark-packages.org/package/saurfang/spark-sas7bdat}, \url{https://github.com/saurfang/spark-sas7bdat}, \url{https://github.com/sparklyr/sparklyr}
 }
 \seealso{
 \code{\link[sparklyr]{spark_connect}}, \code{\link[sparklyr]{sdf_register}}
