@@ -45,7 +45,8 @@ spark_dependencies <- function(spark_version, scala_version, ...) {
   sparklyr::spark_dependency(
     packages = c(
       sprintf("saurfang:spark-sas7bdat:2.0.0-s_%s", scala_version)
-    )
+    ),
+    repositories = "https://repos.spark-packages.org/"
   )
 }
 .onLoad <- function(libname, pkgname) {
